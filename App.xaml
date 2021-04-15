@@ -1,0 +1,21 @@
+﻿<Application x:Class="LoginApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewModel="clr-namespace:LoginApp.ViewModel"
+            xmlns:view="clr-namespace:LoginApp.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type viewModel:LoginViewModel}">
+                <view:LoginView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:LobbyViewModel}">
+                <view:LobbyView/>
+            </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:CreateAccountViewModel}">
+            <view:CreateAccountView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:ModifyAccountViewModel}">
+            <view:ModifyAccountView/>
+        </DataTemplate>
+    </Application.Resources>
+</Application>
